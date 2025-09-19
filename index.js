@@ -1,14 +1,9 @@
-require("dotenv").config();
 const express = require("express"); //Importamos la libreria Express
 const app = express(); //Para guardar la instancia del servidor
 
-
+process.env.PORT;
 
 const students = require("./data"); //Importamos los datos de data.js
-
-app.get('/', (req, res) => {
-    res.send(`Welcom to the homeworck express`);
-});
 
 app.get("/user-info/:id" , (req, res) => { //Defino GET, lo volvemos dinamico y :id puede ser cualquier numero, req objeto con solicitud del cliente, res objeto para responder
     const IdStudent = req.params.id; //Obtiene el valor que puso el cliente
