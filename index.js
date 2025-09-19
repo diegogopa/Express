@@ -5,7 +5,7 @@ process.env.PORT;
 
 const students = require("./data"); //Importamos los datos de data.js
 app.get('/', (req, res) => {
-    res.send("Welcome to the server. This team has ${process.env.MAX_ID} member(s). Take that into account for searching by IDs");
+    res.send("Welcome to the homework");
 });
 app.get("/user-info/:id" , (req, res) => { //Defino GET, lo volvemos dinamico y :id puede ser cualquier numero, req objeto con solicitud del cliente, res objeto para responder
     const IdStudent = req.params.id; //Obtiene el valor que puso el cliente
