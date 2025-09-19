@@ -14,6 +14,9 @@ app.get("/user-info/:id" , (req, res) => { //Defino GET, lo volvemos dinamico y 
     }
 });
 
-app.listen(port, () => { //Iniciamos el servidor con el puerto
-    console.log(`Example app listening on port ${port}`); //Muestro la direccion 
+
+app.listen(process.env.PORT, () => { //Iniciamos el servidor con el puerto
+    console.log(`Example app listening on port ${process.env.PORT}`); //Muestro la direccion 
 });
+
+require("dotenv").config();
